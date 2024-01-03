@@ -17,27 +17,32 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <artice class="advice-card">
-      <h2 class="advice-number">Advice #<span id="advice-number"></span></h2>
-      <p class="advice-text" id="advice-text">""</p>
+    <article class="advice-card" role="main">
+      <h2 class="advice-number" role="heading">
+        Advice #<span id="advice-number"></span>
+      </h2>
+      <p class="advice-text" id="advice-text" role="text">""</p>
       <img
         src="./images/pattern-divider-desktop.svg"
         class="divider ds-divider"
-        alt="devider"
+        alt="divider"
+        role="divider"
       />
       <img
         src="./images/pattern-divider-mobile.svg"
         class="divider mb-divider"
-        alt="devider"
+        alt="divider"
+        role="divider"
       />
       <button
         class="get-advice-btn"
         id="get-advice-btn"
         aria-label="Get advice button"
+        role="button"
       >
-        <img src="./images/icon-dice.svg" alt="" />
+        <img src="./images/icon-dice.svg" alt="" role="icon" />
       </button>
-    </artice>
+    </article>
 
     <!-- Script Files -->
     <script src="./api/advice_api.js"></script>

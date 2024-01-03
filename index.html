@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="advice-card">
+      <h2 class="advice-number">Advice #<span id="advice-number">117</span></h2>
+      <p class="advice-text" id="advice-text">
+        "It is easy to sit up and take notice, what's difficult is getting up
+        and taking action."
+      </p>
+      <img
+        src="./images/pattern-divider-desktop.svg"
+        class="divider ds-divider"
+        alt="devider"
+      />
+      <img
+        src="./images/pattern-divider-mobile.svg"
+        class="divider mb-divider"
+        alt="devider"
+      />
+      <button class="get-advice-btn" id="get-advice-btn">
+        <img src="./images/icon-dice.svg" alt="" />
+      </button>
+    </div>
+
+    <!-- Script Files -->
+    <script src="./api/advice_api.js"></script>
+  </body>
+</html>

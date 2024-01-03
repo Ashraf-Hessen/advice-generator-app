@@ -1,0 +1,155 @@
+/******************/
+/* Root Variables */
+/******************/
+:root {
+  --grayish-blue: #4e5d73;
+  --dark-grayish-blue: #323a49;
+  --dark-blue: #1f2632;
+  --light-cyan: #cee3e9;
+  --neon-green: #52ffa8;
+  --soft-red: #f15e50;
+}
+
+/****************/
+/* Global Rules */
+/****************/
+body {
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+}
+
+* {
+  font-family: "manrope";
+  box-sizing: border-box;
+}
+
+/**********************/
+/* Advice card Styles */
+/**********************/
+.advice-card {
+  width: 400px;
+  background-color: var(--dark-grayish-blue);
+  text-align: center;
+  padding: 33px;
+  border-radius: 10px;
+}
+
+.advice-card .advice-number {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--neon-green);
+}
+
+.advice-card .advice-text {
+  margin: 0;
+  color: var(--light-cyan);
+  font-size: 21px;
+  margin-bottom: 30px;
+}
+
+.advice-card .divider {
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.advice-card .get-advice-btn {
+  height: 50px;
+  width: 50px;
+  background-color: var(--neon-green);
+  margin: auto;
+  margin-bottom: -60px;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.advice-card .get-advice-btn.loading {
+  background-color: var(--light-cyan);
+  opacity: 0.5;
+  cursor: progress;
+  animation: loading_animation 1s infinite ease;
+}
+
+.advice-card .get-advice-btn.error {
+  background-color: var(--soft-red);
+}
+
+.advice-card .get-advice-btn:hover {
+  box-shadow: 0px 0px 40px var(--neon-green);
+}
+
+.advice-card .get-advice-btn.error:hover {
+  box-shadow: 0px 0px 40px var(--soft-red);
+}
+
+.advice-card .get-advice-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 565px) {
+  .advice-card {
+    width: 100%;
+    padding-inline: 25px;
+  }
+
+  .advice-card .advice-number {
+    font-size: 12px;
+  }
+
+  .advice-card .advice-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .advice-card .divider.mb-divider {
+    display: inline;
+  }
+}
+
+@media (min-width: 768px) {
+  .advice-card .divider.ds-divider {
+    display: inline;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Fonts */
+@font-face {
+  src: url("../fonts/Manrope-ExtraBold.ttf");
+  font-family: "manrope";
+}
+
+/* Animations */
+
+@keyframes loading_animation {
+  from {
+    transform: rotate(0deg);
+    box-shadow: 0px 0px 0px var(--light-cyan);
+  }
+  to {
+    transform: rotate(360deg);
+    box-shadow: 0px 0px 40px var(--light-cyan);
+  }
+}

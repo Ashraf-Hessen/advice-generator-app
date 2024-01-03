@@ -25,7 +25,7 @@ function getAdvice() {
       // Set id of advice on element of advice number
       adviceNumber.innerText = slip.id;
       // Set text of advice on element of advice text
-      adviceText.innerText = slip.advice;
+      adviceText.innerText = `"${slip.advice}"`;
     })
     .catch((err) => {
       // Set button of get advice on error mode
